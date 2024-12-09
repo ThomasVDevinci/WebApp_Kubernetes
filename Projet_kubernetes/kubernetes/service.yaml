@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+spec:
+  selector:
+    app: mysql
+  ports:
+    - protocol: TCP
+      port: 3306  # Port par défaut pour MySQL
+      targetPort: 3306
+  clusterIP: None  # Pas d'accès externe
